@@ -56,7 +56,7 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Knight2D.sln",
+    "dotnet.defaultSolution": "Adventure2D.sln",
     "workbench.colorCustomizations": {
         "activityBar.activeBackground": "#1f6fd0",
         "activityBar.background": "#1f6fd0",
