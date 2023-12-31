@@ -3,7 +3,7 @@ using UnityEngine;
 public class CheckDirection : MonoBehaviour
 {
     Animator animator;
-    CapsuleCollider2D touchingCollider;
+    Collider2D touchingCollider;
     [SerializeField] ContactFilter2D contactFilter2D;
 
     RaycastHit2D[] groundHits;
@@ -60,7 +60,7 @@ public class CheckDirection : MonoBehaviour
         groundHits = new RaycastHit2D[5];
         wallHits = new RaycastHit2D[5];
         ceilingHits = new RaycastHit2D[5];
-        touchingCollider = GetComponent<CapsuleCollider2D>();
+        touchingCollider = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
     }
 

@@ -12,4 +12,5 @@ public class AnimationString : MonoBehaviour
     internal static string isAlive = "isAlive";
     internal static string hurtTrigger = "hurtTrigger";
     internal static string sceneTransition = "sceneTransition";
+    internal static string isClaimed = "isClaimed";
 }

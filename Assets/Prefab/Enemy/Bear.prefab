@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 2058220293706858897}
   - component: {fileID: 4419822630319624375}
   - component: {fileID: 2775686782642172094}
-  - component: {fileID: 2310852779366259265}
   - component: {fileID: 2438696666861241552}
+  - component: {fileID: 2310852779366259265}
   m_Layer: 6
   m_Name: Bear
   m_TagString: Enemy
@@ -187,6 +187,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+--- !u!114 &2438696666861241552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2149417236210894939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f5a3a164d0b3c64093f6fd5a3bb8054, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 2
+  _health: 2
+  invincibleTime: 0
+  destroyTime: 0.6
+  takeDamageSentence: Huhu
+  dieSentence: Huhu
+  healSentence: 
 --- !u!114 &2310852779366259265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,25 +235,6 @@ MonoBehaviour:
   groundDistannce: 0.05
   wallDistannce: 0.05
   ceilingDistannce: 0.1
---- !u!114 &2438696666861241552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2149417236210894939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f5a3a164d0b3c64093f6fd5a3bb8054, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _maxHealth: 2
-  _health: 2
-  invincibleTime: 0
-  destroyTime: 0.25
-  takeDamageSentence: Ouch
-  dieSentence: Huhu
-  healSentence: "H\xFA"
 --- !u!1 &6568743995153665252
 GameObject:
   m_ObjectHideFlags: 0

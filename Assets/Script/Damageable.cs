@@ -6,7 +6,8 @@ public class Damageable : MonoBehaviour, IDamageable
 {
     //Health, MaxHealth, Hit, Heal, Invincible, Die
 
-    private Animator animator;
+    Animator animator;
+    public GameObject restart;
     [SerializeField] private uint _maxHealth = 3;
     [SerializeField] private uint _health;
     private const uint damage = 1;
@@ -15,7 +16,7 @@ public class Damageable : MonoBehaviour, IDamageable
     private bool isInvincible = false;
 
     [SerializeField] private float invincibleTime = 0.25f;
-    [SerializeField] private float destroyTime = 0.5f;
+    [SerializeField] private float destroyTime = 1f;
     [SerializeField] private string takeDamageSentence = "Ouch";
     [SerializeField] private string dieSentence = "Huhu";
     [SerializeField] private string healSentence = "Hú";
@@ -85,6 +86,11 @@ public class Damageable : MonoBehaviour, IDamageable
     public void Die()
     {
         Destroy(gameObject, destroyTime);
+        if(restart == null)
+            return;
+        else{
+            restart.SetActive(true);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

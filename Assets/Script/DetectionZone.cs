@@ -7,9 +7,10 @@ public class DetectionZone : MonoBehaviour
     private Collider2D checkGround;
     private ContactFilter2D contactFilter;
     private RaycastHit2D[] groundedHits = new RaycastHit2D[10];
-    private float groundDistance = 1f;
+    [SerializeField] private float groundDistance = 1f;
 
-    public bool HaveGround { get; private set; }
+    [SerializeField] private bool _haveGround;
+    public bool HaveGround { get => _haveGround; private set => _haveGround = value; }
 
     private void Awake() {
         hitCollider =  new List<Collider2D>();

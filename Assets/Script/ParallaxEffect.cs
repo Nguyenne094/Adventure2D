@@ -20,6 +20,7 @@ public class ParallaxEffect : MonoBehaviour
     }
 
     private void FixedUpdate() {
+        if(subject == null) return;
         Vector2 bgPos = startPos + (travel * parallaxFactor);
         transform.position = new Vector3(bgPos.x, transform.position.y, startPosZ);
     }

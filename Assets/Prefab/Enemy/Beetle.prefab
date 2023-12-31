@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 8777154250477980518}
   - component: {fileID: 8095794505315426046}
   - component: {fileID: 2153025064009541875}
-  - component: {fileID: 1880015890275790521}
   - component: {fileID: 7968648860265780389}
+  - component: {fileID: 1880015890275790521}
   m_Layer: 6
   m_Name: Beetle
   m_TagString: Enemy
@@ -144,6 +144,25 @@ CircleCollider2D:
   m_Offset: {x: -0.003401041, y: -0.050529163}
   serializedVersion: 2
   m_Radius: 0.10511645
+--- !u!114 &7968648860265780389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764536141498781272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f5a3a164d0b3c64093f6fd5a3bb8054, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 1
+  _health: 1
+  invincibleTime: 0
+  destroyTime: 0.6
+  takeDamageSentence: 
+  dieSentence: Huhu
+  healSentence: 
 --- !u!114 &1880015890275790521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,24 +177,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   amplitude: 1
-  flipPos: 1
-  flipWaitTime: 1
---- !u!114 &7968648860265780389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1764536141498781272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f5a3a164d0b3c64093f6fd5a3bb8054, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _maxHealth: 1
-  _health: 0
-  invincibleTime: 0
-  destroyTime: 0.25
-  takeDamageSentence: Ouch
-  dieSentence: Huhu
-  healSentence: "H\xFA"

@@ -1,13 +1,14 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody2D)), RequireComponent(typeof(CheckDirection))]
+[RequireComponent(typeof(Rigidbody2D)), RequireComponent(typeof(CheckDirection)), RequireComponent(typeof(Animator))]
 public class Player : MonoBehaviour
 {
-    private Rigidbody2D rb;
-    private PlayerControl playerControl;
-    private Animator animator;
-    private CheckDirection checkDirection;
+    Rigidbody2D rb;
+    PlayerControl playerControl;
+    Animator animator;
+    CheckDirection checkDirection;
+    AudioSource jumpSound;
     [SerializeField] private ParticleSystem dustStep;
     private Vector2 movement;
 
@@ -54,6 +55,7 @@ public class Player : MonoBehaviour
         checkDirection = GetComponent<CheckDirection>();
         dustStep = GetComponentInChildren<ParticleSystem>();
         playerControl = new PlayerControl();
+        jumpSound = GetComponentInChildren<AudioSource>();
    }
 
    private void FixedUpdate() {
@@ -90,6 +92,8 @@ public class Player : MonoBehaviour
     public void OnJump(InputAction.CallbackContext ctx){
         if(ctx.started && checkDirection.IsGrounded){
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            jumpSound?.Stop();
+            jumpSound?.Play();
         }
     }
 

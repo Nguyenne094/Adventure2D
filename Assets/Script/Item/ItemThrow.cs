@@ -5,7 +5,6 @@ public class ItemThrow : MonoBehaviour
     Rigidbody2D rb;
     [SerializeField] private float fireSpeed = 2f;
     Player player;
-    Vector2 knockback = Vector2.zero;
 
     private uint damage = 1;
 
@@ -21,7 +20,7 @@ public class ItemThrow : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         Damageable damageable = other.GetComponent<Damageable>();
 
-        if(damageable){
+        if(damageable && other.CompareTag("Enemy")){
             damageable.Hit(damage);
         }
         Destroy(gameObject);

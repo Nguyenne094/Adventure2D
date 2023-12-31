@@ -232,8 +232,8 @@ public partial class @PlayerControl: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""efcf51f4-b9a5-4c39-830e-b4afb16216a6"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""id"": ""9fcb698f-766e-48f8-9cc8-e341662ccacc"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
@@ -256,6 +256,17 @@ public partial class @PlayerControl: IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""5266b6b5-4095-4109-b2d0-12fb1284dc68"",
                     ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ec4c05f9-dd4d-4895-91fe-0e3ff12914b6"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
